@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>Interpolation search is an improved variant of binary search. This search algorithm works on the probing position of the required value. For this algorithm to work properly, the data collection should be in a sorted form and equally distributed.</p>
+<p>Binary search has a huge advantage of time complexity over linear search. Linear search has worst-case complexity of &Omicron;(n) whereas binary search has &Omicron;(log n).</p>
+<p>There are cases where the location of target data may be known in advance. For example, in case of a telephone directory, if we want to search the telephone number of Morphius. Here, linear search and even binary search will seem slow as we can directly jump to memory space where the names start from 'M' are stored.</p>
+<h2>Positioning in Binary Search</h2>
+<p>In binary search, if the desired data is not found then the rest of the list is divided in two parts, lower and higher. The search is carried out in either of them.</p>
+<div align="center"><%= image_tag("bst_step_one.jpg", :alt => "Binary Search") %></div>
+<div align="center"><%= image_tag("bst_step_two.jpg", :alt => "Binary Search") %></div>
+<div align="center"><%= image_tag("bst_step_three.jpg", :alt => "Binary Search") %></div>
+<div align="center"><%= image_tag("bst_step_four.jpg", :alt => "Binary Search") %></div>
+<p>Even when the data is sorted, binary search does not take advantage to probe the position of the desired data.</p>
+<h2>Position Probing in Interpolation Search</h2>
+<p>Interpolation search finds a particular item by computing the probe position. Initially, the probe position is the position of the middle most item of the collection.</p>
+<div align="center"><%= image_tag("interpolation_step_one.jpg", :alt => "Interpolation Search") %></div>
+<div align="center"><%= image_tag("interpolation_step_two.jpg", :alt => "Interpolation Search") %></div>
+<p>If a match occurs, then the index of the item is returned. To split the list into two parts, we use the following method &minus;</p>
+<pre>
+mid = Lo &plus; ((Hi - Lo) / (A[Hi] - A[Lo])) * (X - A[Lo])
+
+where −
+   A    = list
+   Lo   = Lowest index of the list
+   Hi   = Highest index of the list
+   A[n] = Value stored at index n in the list
+</pre>
+<p>If the middle item is greater than the item, then the probe position is again calculated in the sub-array to the right of the middle item. Otherwise, the item is searched in the subarray to the left of the middle item. This process continues on the sub-array as well until the size of subarray reduces to zero.</p>
+<p>Runtime complexity of interpolation search algorithm is <b>&Omicron;(log (log n))</b> as compared to <b>&Omicron;(log n)</b> of BST in favorable situations.</p>
+<h3>Algorithm</h3>
+<p>As it is an improvisation of the existing BST algorithm, we are mentioning the steps to search the 'target' data value index, using position probing &minus;</p>
+<pre>
+Step 1 &minus; Start searching <b>data</b> from middle of the list.
+Step 2 &minus; If it is a match, return the index of the item, and exit.
+Step 3 &minus; If it is not a match, probe position.
+Step 4 &minus; Divide the list using probing formula and find the new midle.
+Step 5 &minus; If data is greater than middle, search in higher sub-list.
+Step 6 &minus; If data is smaller than middle, search in lower sub-list.
+Step 7 &minus; Repeat until match.
+</pre>
+<h2>Pseudocode</h2>
+<pre>
+A &rarr; Array list
+N &rarr; Size of A
+X &rarr; Target Value
+
+Procedure Interpolation_Search()
+
+   Set Lo  &rarr;  0
+   Set Mid &rarr; -1
+   Set Hi  &rarr;  N-1
+
+   While X does not match
+   
+      if Lo equals to Hi OR A[Lo] equals to A[Hi]
+         EXIT: Failure, Target not found
+      end if
+      
+      Set Mid = Lo + ((Hi - Lo) / (A[Hi] - A[Lo])) * (X - A[Lo]) 
+
+      if A[Mid] = X
+         EXIT: Success, Target found at Mid
+      else 
+         if A[Mid] &lt; X
+            Set Lo to Mid+1
+         else if A[Mid] &gt; X
+            Set Hi to Mid-1
+         end if
+      end if
+ 
+   End While
+
+End Procedure
+</pre>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems Overview</h4>
+<p>An Operating System (OS) is an interface between a computer user and computer hardware. An operating system is a software which performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.</p>
+<p>Some popular Operating Systems include Linux, Windows, OS X, VMS, OS/400, AIX, z/OS, etc.</p>
+<h7>Definition</h7>
+<p>An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.</p>
+<div align="center"><%= image_tag("conceptual_view.jpg", :alt => "Operating System") %></div>
+<p>Following are some of important functions of an operating System.</p>
+<ul class="list">
+<li>Memory Management</li>
+<li>Processor Management</li>
+<li>Device Management</li>
+<li>File Management</li>
+<li>Security</li>
+<li>Control over system performance</li>
+<li>Job accounting</li> 
+<li>Error detecting aids</li>
+<li>Coordination between other software and users</li>
+</ul>
+<h7>Memory Management</h7>
+<p>Memory management refers to management of Primary Memory or Main Memory. Main memory is a large array of words or bytes where each word or byte has its own address.</p>
+<p>Main memory provides a fast storage that can be accessed directly by the CPU. For a program to be executed, it must in the main memory. An Operating System does the following activities for memory management &minus;</p>
+<ul class="list">
+<li><p>Keeps tracks of primary memory, i.e., what part of it are in use by whom, what part are not in use.</p></li>
+<li><p>In multiprogramming, the OS decides which process will get memory when and how much.</p></li>
+<li><p>Allocates the memory when a process requests it to do so.</p></li>
+<li><p>De-allocates the memory when a process no longer needs it or has been terminated.</p></li>
+</ul>
+<h7>Processor Management</h7>
+<p>In multiprogramming environment, the OS decides which process gets the processor when and for how much time. This function is called <b>process  scheduling</b>. An Operating System does the following activities for processor management &minus;</p>
+<ul class="list">
+<li><p>Keeps tracks of processor and status of process. The program responsible for this task is known as <b>traffic controller</b>.</p></li>
+<li><p>Allocates the processor (CPU) to a process.</p></li>
+<li><p>De-allocates processor when a process is no longer required.</p></li>
+</ul>
+<h7>Device Management</h7>
+<p>An Operating System manages device communication via their respective drivers. It does the following activities for device management &minus;</p>
+<ul class="list">
+<li><p>Keeps tracks of all devices. Program responsible for this task is known as the <b>I/O controller</b>.</p></li>
+<li><p>Decides which process gets the device when and for how much time.</p></li>
+<li><p>Allocates the device in the efficient way.</p></li>
+<li><p>De-allocates devices.</p></li>
+</ul>
+<h7>File Management</h7>
+<p>A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions.</p>
+<p>An Operating System does the following activities for file management &minus;</p>
+<ul class="list">
+<li><p>Keeps track of information, location, uses, status etc. The collective facilities are often known as <b>file system</b>.</p></li>
+<li><p>Decides who gets the resources.</p></li>
+<li><p>Allocates the resources.</p></li>
+<li><p>De-allocates the resources.</p></li>
+</ul>
+<h7>Other Important Activities</h7>
+<p>Following are some of the important activities that an Operating System performs &minus;</p>
+<ul class="list">
+<li><p><b>Security</b> &minus;  By means of password and similar other techniques, it prevents unauthorized access to programs and data.</p></li>
+<li><p><b>Control over system performance</b> &minus; Recording delays between request for a service and response from the system.</p></li>
+<li><p><b>Job accounting</b> &minus; Keeping track of time and resources used by various jobs and users.</p></li>
+<li><p><b>Error detecting aids</b> &minus; Production of dumps, traces, error messages, and other debugging and error detecting aids.</p></li>
+<li><p><b>Coordination between other softwares and users</b> &minus; Coordination and assignment of compilers, interpreters, assemblers and other software to the various users of the computer systems.</p></li>
+</ul>
+<hr />
+</body>
+</html>

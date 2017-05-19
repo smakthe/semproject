@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul></div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<h4>Local Environment Setup</h4>
+<p>If you are willing to set up your environment for C programming language, you need the following two tools available on your computer, (a) Text Editor and (b) The C Compiler.</p>
+<h4>Text Editor</h4>
+<p>This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi.</p>
+<p>The name and the version of the text editor can vary on different operating systems. For example, Notepad will be used on Windows, and vim or vi can be used on Windows as well as Linux or UNIX.</p>
+<p>The files you create with your editor are called source files and contain program source code. The source files for C programs are typically named with the extension "<b>.c</b>".</p>
+<p>Before starting your programming, make sure you have one text editor in place and you have enough experience to write a computer program, save it in a file, compile it, and finally execute it.</p>
+<h4>The C Compiler</h4>
+<p>The source code written in the source file is the human readable source for your program. It needs to be "compiled", to turn into machine language so that your CPU can actually execute the program as per the given instructions.</p>
+<p>This C programming language compiler will be used to compile your source code into a final executable program. We assume you have the basic knowledge about a programming language compiler.</p>
+<p>Most frequently used and free available compiler is GNU C/C&plus;&plus; compiler. Otherwise, you can have compilers either from HP or Solaris if you have respective Operating Systems (OS).</p>
+<p>The following section guides you on how to install GNU C/C&plus;&plus; compiler on various OS. We are mentioning C/C&plus;&plus; together because GNU GCC compiler works for both C and C&plus;&plus; programming languages.</p>
+<h4>Installation on UNIX/Linux</h4>
+<p>If you are using <b>Linux or UNIX</b>, then check whether GCC is installed on your system by entering the following command from the command line &minus;</p>
+<pre>
+$ gcc -v
+</pre>
+<p>If you have GNU compiler installed on your machine, then it should print a message such as the following &minus;</p>
+<pre>
+Using built-in specs.
+Target: i386-redhat-linux
+Configured with: ../configure --prefix = /usr .......
+Thread model: posix
+gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
+</pre>
+<p>If GCC is not installed, then you will have to install it yourself using the detailed instructions available at <a href="https://gcc.gnu.org/install/" rel="nofollow" target="_blank">https://gcc.gnu.org/install/</a></p>
+<p>This tutorial has been written based on Linux and all the given examples have been compiled on Cent OS flavor of Linux system.</p>
+<h4>Installation on Mac OS</h4>
+<p>If you use Mac OS X, the easiest way to obtain GCC is to download the Xcode development environment from Apple's website and follow the simple installation instructions. Once you have Xcode setup, you will be able to use GNU compiler for C/C&plus;&plus;.</p>
+<p>Xcode is currently available at <a href="https://developer.apple.com/technologies/tools/" rel="nofollow" target="_blank">developer.apple.com/technologies/tools/</a></p>
+<h4>Installation on Windows</h4>
+<p>To install GCC on Windows, you need to install MinGW. To install MinGW, go to the MinGW homepage, <a href="http://www.mingw.org" rel="nofollow" target="_blank"> www.mingw.org</a>, and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-&lt;version&gt;.exe.</p>
+<p>While installing MinWG, at a minimum, you must install gcc-core, gcc-g&plus;&plus;, binutils, and the MinGW runtime, but you may wish to install more.</p>
+<p>Add the bin subdirectory of your MinGW installation to your <b>PATH</b> environment variable, so that you can specify these tools on the command line by their simple names.</p>
+<p>When the installation is complete, you will be able to run gcc, g&plus;&plus;, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.</p>
+<hr />
+</body>
+</html>

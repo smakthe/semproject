@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems Multi-threading</h4>
+<h7>What is Thread?</h7>
+<p>A thread is a flow of execution through the process code, with its own program counter that keeps track of which instruction to execute next, system registers which hold its current working variables, and a stack which contains the execution history.</p>
+<p>A thread shares with its peer threads few information like code segment, data segment and open files. When one thread alters a code segment memory item, all other threads see that.</p>
+<p>A thread is also called a <b>lightweight process</b>. Threads provide a way to improve application performance through parallelism. Threads represent a software approach to improving performance of operating system by reducing the overhead thread is equivalent to a classical process.</p>
+<p>Each thread belongs to exactly one process and no thread can exist outside a process. Each thread represents a separate flow of control. Threads have been successfully used in implementing network servers and web server. They also provide a suitable foundation for parallel execution of applications on shared memory multiprocessors. The following figure shows the working of a single-threaded and a multithreaded process.</p>
+<div align="center"><%= image_tag("thread_processes.jpg", :alt => "Threads and Processes") %></div>
+<h7>Difference between Process and Thread</h7>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:5%;text-align:center;">S.N.</th>
+<th style="width:45%;text-align:center;">Process</th>
+<th>Thread</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Process is heavy weight or resource intensive.</td>
+<td>Thread is light weight, taking lesser resources than a process.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Process switching needs interaction with operating system.</td>
+<td>Thread switching does not need to interact with operating system.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>In multiple processing environments, each process executes the same code but has its own memory and file resources.</td>
+<td>All threads can share same set of open files, child processes.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>If one process is blocked, then no other process can execute until the first process is unblocked.</td>
+<td>While one thread is blocked and waiting, a second thread in the same task can run.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Multiple processes without using threads use more resources.</td>
+<td>Multiple threaded processes use fewer resources.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>In multiple processes each process operates independently of the others.</td>
+<td>One thread can read, write or change another thread's data.</td>
+</tr>
+</table>
+</div>
+<h7>Advantages of Thread</h7>
+<ul class="list">
+<li>Threads minimize the context switching time.</li>
+<li>Use of threads provides concurrency within a process.</li>
+<li>Efficient communication.</li>
+<li>It is more economical to create and context switch threads.</li>
+<li>Threads allow utilization of multiprocessor architectures to a greater scale and efficiency.</li>
+</ul>
+<h7>Types of Thread</h7>
+<p>Threads are implemented in following two ways &minus;</p>
+<ul class="list">
+<li><p><b>User Level Threads</b> &minus; User managed threads.</p></li>
+<li><p><b>Kernel Level Threads</b> &minus; Operating System managed threads acting on kernel, an operating system core.</p></li>
+</ul>
+<h7>User Level Threads</h7>
+<p>In this case, the thread management kernel is not aware of the existence of threads. The thread library contains code for creating and destroying threads, for passing message and data between threads, for scheduling thread execution and for saving and restoring thread contexts. The application starts with a single thread.</p>
+<div align="center"><%= image_tag("user_threads.jpg", :alt => "User Threads") %></div>
+<h7>Advantages</h7>
+<ul class="list">
+<li>Thread switching does not require Kernel mode privileges.</li>
+<li>User level thread can run on any operating system.</li>
+<li>Scheduling can be application specific in the user level thread.</li>
+<li>User level threads are fast to create and manage.</li>
+</ul>
+<h7>Disadvantages</h7>
+<ul class="list">
+<li>In a typical operating system, most system calls are blocking.</li>
+<li>Multithreaded application cannot take advantage of multiprocessing.</li>
+</ul>
+<h7>Kernel Level Threads</h7>
+<p>In this case, thread management is done by the Kernel. There is no thread management code in the application area. Kernel threads are supported directly by the operating system. Any application can be programmed to be multithreaded. All of the threads within an application are supported within a single process.</p>
+<p>The Kernel maintains context information for the process as a whole and for individuals threads within the process. Scheduling by the Kernel is done on a thread basis. The Kernel performs thread creation, scheduling and management in Kernel space. Kernel threads are generally slower to create and manage than the user threads.</p>
+<h7>Advantages</h7>
+<ul class="list">
+<li>Kernel can simultaneously schedule multiple threads from the same process on multiple processes.</li>
+<li>If one thread in a process is blocked, the Kernel can schedule another thread of the same process.</li>
+<li>Kernel routines themselves can be multithreaded.</li>
+</ul>
+<h7>Disadvantages</h7>
+<ul class="list">
+<li>Kernel threads are generally slower to create and manage than the user threads.</li>
+<li>Transfer of control from one thread to another within the same process requires a mode switch to the Kernel.</li>
+</ul>
+<h7>Multithreading Models</h7>
+<p>Some operating system provide a combined user level thread and Kernel level thread facility. Solaris is a good example of this combined approach. In a combined system, multiple threads within the same application can run in parallel on multiple processors and a blocking system call need not block the entire process. Multithreading models are three types</p>
+<ul class="list">
+<li>Many to many relationship.</li>
+<li>Many to one relationship.</li>
+<li>One to one relationship.</li>
+</ul>
+<h7>Many to Many Model</h7>
+<p>The many-to-many model multiplexes any number of user threads onto an equal or smaller number of kernel threads.</p>
+<p>The following diagram shows the many-to-many threading model where 6 user level threads are multiplexing with 6 kernel level threads. In this model, developers can create as many user threads as necessary and the corresponding Kernel threads can run in parallel on a multiprocessor machine. This model provides the best accuracy on concurrency and when a thread performs a blocking system call, the kernel can schedule another thread for execution.</p>
+<div align="center"><%= image_tag("many_to_many.jpg", :alt => "Many to Many") %></div>
+<h7>Many to One Model</h7>
+<p>Many-to-one model maps many user level threads to one Kernel-level thread. Thread management is done in user space by the thread library. When thread makes a blocking system call, the entire process will be blocked. Only one thread can access the Kernel at a time, so multiple threads are unable to run in parallel on multiprocessors.</p>
+<p>If the user-level thread libraries are implemented in the operating system in such a way that the system does not support them, then the Kernel threads use the many-to-one relationship modes.</p>
+<div align="center"><%= image_tag("many_to_one.jpg", :alt => "Many to One") %></div>
+<h7>One to One Model</h7>
+<p>There is one-to-one relationship of user-level thread to the kernel-level thread. This model provides more concurrency than the many-to-one model. It also allows another thread to run when a thread makes a blocking system call. It supports multiple threads to execute in parallel on microprocessors.</p>
+<p>Disadvantage of this model is that creating user thread requires the corresponding Kernel thread. OS/2, windows NT and windows 2000 use one to one relationship model.</p>
+<div align="center"><%= image_tag("one_to_one.jpg", :alt => "One to One") %></div>
+<h7>Difference between User-Level &amp; Kernel-Level Thread</h7>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:5%; text-align:center;">S.N.</th>
+<th style="width:45%; text-align:center">User-Level Threads</th>
+<th style="width:45%; text-align:center">Kernel-Level Thread</th>
+</tr>
+<tr>
+<td>1</td>
+<td>User-level threads are faster to create and manage.</td>
+<td>Kernel-level threads are slower to create and manage.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Implementation is by a thread library at the user level.</td>
+<td>Operating system supports creation of Kernel threads.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>User-level thread is generic and can run on any operating system.</td>
+<td>Kernel-level thread is specific to the operating system.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Multi-threaded applications cannot take advantage of multiprocessing.</td>
+<td>Kernel routines themselves can be multithreaded.</td>
+</tr>
+</table>
+</div>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

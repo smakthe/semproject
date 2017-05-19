@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<style>
+body {
+    background-color: #C0C0C0;
+}
+</style>
+<title>Learn Online</title>
+ <%= stylesheet_link_tag 'students.scss' %>
+	  <center><h1>LearnOnline</h1></center>
+	  <center><h7>-an online study point</h7></center>
+	   <hr/>
+</head>     
+<body> 
+   <div class="index1">
+			<justify><h3>Features:</h3></justify>
+         <justify>
+            <ul>
+               <li><a><span>Free Text Tutorials</span></a></li>
+               <li><a>Coding Ground </a> </li>
+               <li><a>Tutor Connect</a></li>
+               <li><a> Tutorial Videos </a></li>
+               <li><a>Live Classes </a></li>
+               <li><a>Whiteboard</a></li>
+            </ul>
+         </justify>
+<hr />
+<h2>Text Tutorials Offered:</h2>
+<ul>
+<li> <%= link_to 'Operating Systems', os_home_path%></li>	
+<li> <%= link_to 'Data Structures and Algorithms', dsalgo_index_path %></li>
+</ul>
+<h2> Online Coding IDEs Offered:</h2>
+<ul>
+<li><a href="http://rextester.com/l/c_online_compiler_gcc">Compile C Online</a></li>
+<li><a href="http://cpp.sh/">Compile C++ Online</a></li>
+<li><a href="https://ideone.com/">Compile Java Online</a></li>
+</ul>
+<h2> Connect with Tutors:</h2>
+<ul>
+<li><a><%= link_to 'Watch Tutorial Videos', videos_index_path %></a></li>
+<li><a>Live Connect Here</a></li>
+</ul>
+<h2>Write and Send:</h2>
+<ul>
+<li><a><%= link_to 'Whiteboard', canvas_index_path %></a></li>
+<li> <a href="http://www.sendfiles.net"><i class="fa fa-send"></i> &nbsp;SENDFiles</a> </li>
+</ul>
+<p>More Courses will be available soon!</p>
+</div>
+</body>
+</html>

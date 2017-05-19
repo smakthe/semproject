@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>The way to write arithmetic expression is known as a <b>notation</b>. An arithmetic expression can be written in three different but equivalent notations, i.e., without changing the essence or output of an expression. These notations are &minus;</p>
+<ul>
+<li>Infix Notation</li>
+<li>Prefix (Polish) Notation</li>
+<li>Postfix (Reverse-Polish) Notation</li>
+</ul>
+<p>These notations are named as how they use operator in expression. We shall learn the same here in this chapter.</p>  
+<h4>Infix Notation</h4>   
+<p>We write expression in <b>infix</b> notation, e.g. a - b &plus; c, where operators are used <b>in</b>-between operands. It is easy for us humans to read, write, and speak in infix notation but the same does not go well with computing devices. An algorithm to process infix notation could be difficult and costly in terms of time and space consumption.</p>
+<h4>Prefix Notation</h4>
+<p>In this notation, operator is <b>prefix</b>ed to operands, i.e. operator is written ahead of operands. For example, <b>&plus;ab</b>. This is equivalent to its infix notation <b>a &plus; b</b>. Prefix notation is also known as <b>Polish Notation</b>.</p>
+<h4>Postfix Notation</h4>
+<p>This notation style is known as <b>Reversed Polish Notation</b>. In this notation style, the operator is <b>postfix</b>ed to the operands i.e., the operator is written after the operands. For example, <b>ab&plus;</b>. This is equivalent to its infix notation <b>a &plus; b</b>.</p>
+<p>The following table briefly tries to show the difference in all three notations &minus;</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th>Sr. No.</th>
+<th>Infix Notation</th>
+<th>Prefix Notation</th>
+<th>Postfix Notation</th>
+</tr>
+<tr>
+<td>1</td>
+<td>a &plus; b</td>
+<td>&plus; a b</td>
+<td>a b &plus;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(a &plus; b) &lowast; c</td>
+<td>&lowast; &plus; a b c</td>
+<td>a b &plus; c &lowast;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>a &lowast; (b &plus; c)</td>
+<td>&lowast; a &plus; b c</td>
+<td>a b c &plus; &lowast;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>a / b &plus; c / d</td>
+<td>&plus; / a b / c d</td>
+<td>a b / c d / &plus;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>(a &plus; b) &lowast; (c &plus; d)</td>
+<td>&lowast; &plus; a b &plus; c d</td>
+<td>a b &plus; c d &plus; &lowast;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>((a &plus; b) &lowast; c) - d</td>
+<td>- &lowast; &plus;  a b c d</td>
+<td>a b &plus; c &lowast; d -</td>
+</tr>
+</table>
+<h4>Parsing Expressions</h4>
+<p>As we have discussed, it is not a very efficient way to design an algorithm or program to parse infix notations. Instead, these infix notations are first converted into either postfix or prefix notations and then computed.</p>
+<p>To parse any arithmetic expression, we need to take care of operator precedence and associativity also.</p>
+<h4>Precedence</h4>
+<p>When an operand is in between two different operators, which operator will take the operand first, is decided by the precedence of an operator over others. For example &minus;</p>
+<div align="center"><%= image_tag("operator_precedence.jpg", :alt => "Operator Precedence") %></div>
+<p>As multiplication operation has precedence over addition, b * c will be evaluated first. A table of operator precedence is provided later.</p>
+<h4>Associativity</h4>
+<p>Associativity describes the rule where operators with the same precedence appear in an expression. For example, in expression a &plus; b − c, both &plus; and – have the same precedence, then which part of the expression will be evaluated first, is determined by associativity of those operators. Here, both &plus; and − are left associative, so the expression will be evaluated as <b>(a &plus; b) − c</b>.</p>
+<p>Precedence and associativity determines the order of evaluation of an expression. Following is an operator precedence and associativity table (highest to lowest) &minus;</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th>Sr. No.</th>
+<th>Operator</th>
+<th>Precedence</th>
+<th>Associativity</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Exponentiation &#94;</td>
+<td>Highest</td>
+<td>Right Associative</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Multiplication ( &lowast; ) &amp; Division ( / )</td>
+<td>Second Highest</td>
+<td>Left Associative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Addition ( &plus; ) &amp; Subtraction ( &minus; )</td>
+<td>Lowest</td>
+<td>Left Associative</td>
+</tr>
+</table>
+<p>The above table shows the default behavior of operators. At any point of time in expression evaluation, the order can be altered by using parenthesis. For example &minus;</p>
+<p>In <b>a &plus; b*c</b>, the expression part <b>b</b>*<b>c</b> will be evaluated first, with multiplication as precedence over addition. We here use parenthesis for <b>a &plus; b</b> to be evaluated first, like <b>(a &plus; b)*c</b>.</p>
+<h4>Postfix Evaluation Algorithm</h4>
+<p>We shall now look at the algorithm on how to evaluate postfix notation &minus;</p>
+<pre>
+Step 1 − scan the expression from left to right 
+Step 2 − if it is an operand push it to stack 
+Step 3 − if it is an operator pull operand from stack and perform operation 
+Step 4 − store the output of step 3, back to stack 
+Step 5 − scan the expression until all operands are consumed 
+Step 6 − pop the stack and perform operation
+</pre>
+<hr />
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

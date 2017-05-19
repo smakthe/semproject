@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+
+<h4>Operating Systems Services</h4>
+<p>An Operating System provides services to both the users and to the programs.</p>
+<ul>
+<li>It provides programs an environment to execute.</li>
+<li>It provides users the services to execute the programs in a convenient manner.</li>
+</ul>
+<p>Following are a few common services provided by an operating system &minus;</p>
+<ul>
+<li>Program execution</li>
+<li>I/O operations</li> 9475809222
+<li>File System manipulation</li>
+<li>Communication</li>
+<li>Error Detection</li>
+<li>Resource Allocation</li>
+<li>Protection</li>
+</ul>
+<h7>Program execution</h7>
+<p>Operating systems handle many kinds of activities from user programs to system programs like printer spooler, name servers, file server, etc. Each of these activities is encapsulated as a process.</p>
+<p>A process includes the complete execution context (code to execute, data to manipulate, registers, OS resources in use). Following are the major activities of an operating system with respect to program management &minus;</p>
+<ul>
+<li>Loads a program into memory.</li>
+<li>Executes the program.</li>
+<li>Handles program's execution.</li>
+<li>Provides a mechanism for process synchronization.</li>
+<li>Provides a mechanism for process communication.</li>
+<li>Provides a mechanism for deadlock handling.</li>
+</ul>
+<h7>I/O Operation</h7>
+<p>An I/O subsystem comprises of I/O devices and their corresponding driver software. Drivers hide the peculiarities of specific hardware devices from the users.</p>
+<p>An Operating System manages the communication between user and device drivers.</p>
+<ul>
+<li>I/O operation means read or write operation with any file or any specific I/O device.</li> 
+<li>Operating system provides the access to the required I/O device when required.</li>
+</ul>
+<h7>File system manipulation</h7>
+<p>A file represents a collection of related information. Computers can store files on the disk (secondary storage), for long-term storage purpose. Examples of storage media include magnetic tape, magnetic disk and optical disk drives like CD, DVD. Each of these media has its own properties like speed, capacity, data transfer rate and data access methods.</p>
+<p>A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions. Following are the major activities of an operating system with respect to file management &minus;</p>
+<ul>
+<li>Program needs to read a file or write a file.</li>
+<li>The operating system gives the permission to the program for operation on file.</li>
+<li>Permission varies from read-only, read-write, denied and so on.</li>
+<li>Operating System provides an interface to the user to create/delete files.</li>
+<li>Operating System provides an interface to the user to create/delete directories.</li>
+<li>Operating System provides an interface to create the backup of file system.</li>
+</ul>
+<h7>Communication</h7> 
+<p>In case of distributed systems which are a collection of processors that do not share memory, peripheral devices, or a clock, the operating system manages communications between all the processes. Multiple processes communicate with one another through communication lines in the network.</p>
+<p>The OS handles routing and connection strategies, and the problems of contention and security. Following are the major activities of an operating system with respect to communication &minus;</p>
+<ul>
+<li>Two processes often require data to be transferred between them</li>
+<li>Both the processes can be on one computer or on different computers, but are connected through a computer network.</li>
+<li>Communication may be implemented by two methods, either by Shared Memory or by Message Passing.</li>
+</ul>
+<h7>Error handling</h7>
+<p>Errors can occur anytime and anywhere. An error may occur in CPU, in I/O devices or in the memory hardware. Following are the major activities of an operating system with respect to error handling &minus;</p>
+<ul>
+<li>The OS constantly checks for possible errors.</li>
+<li>The OS takes an appropriate action to ensure correct and consistent computing.</li>
+</ul>
+<h7>Resource Management</h7>
+<p>In case of multi-user or multi-tasking environment, resources such as main memory, CPU cycles and files storage are to be allocated to each user or job. Following are the major activities of an operating system with respect to resource management &minus;</p>
+<ul>
+<li>The OS manages all kinds of resources using schedulers.</li>
+<li>CPU scheduling algorithms are used for better utilization of CPU.</li>
+</ul>
+<h7>Protection</h7>
+<p>Considering a computer system having multiple users and concurrent execution of multiple processes, the various processes must be protected from each other's activities.</p>
+<p>Protection refers to a mechanism or a way to control the access of programs, processes, or users to the resources defined by a computer system. Following are the major activities of an operating system with respect to protection &minus;</p>
+<ul>
+<li>The OS ensures that all access to system resources is controlled.</li>
+<li>The OS ensures that external I/O devices are protected from invalid access attempts.</li>
+<li>The OS provides authentication features for each user by means of passwords.</li>
+</ul>
+<hr />
+</body>
+</html>

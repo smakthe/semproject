@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>A linked list is a sequence of data structures, which are connected together via links.</p>
+<p>Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second most-used data structure after array. Following are the important terms to understand the concept of Linked List.</p>
+<ul>
+<li><p><b>Link</b> &minus; Each link of a linked list can store a data called an element.</p></li>
+<li><p><b>Next</b> &minus; Each link of a linked list contains a link to the next link called Next.</p></li>
+<li><p><b>LinkedList</b> &minus; A Linked List contains the connection link to the first link called First.</p></li>
+</ul>
+<h4>Linked List Representation</h4>
+<p>Linked list can be visualized as a chain of nodes, where every node points to the next node.</p>
+<div align="center"><%= image_tag("linked_list.jpg", :alt => "Linked List") %></div>
+<p>As per the above illustration, following are the important points to be considered.</p>
+<ul>
+<li><p>Linked List contains a link element called first.</p></li>
+<li><p>Each link carries a data field(s) and a link field called next.</p></li>
+<li><p>Each link is linked with its next link using its next link.</p></li>
+<li><p>Last link carries a link as null to mark the end of the list.</p></li>
+</ul>
+<h4>Types of Linked List</h4>
+<p>Following are the various types of linked list.</p>
+<ul>
+<li><p><b>Simple Linked List</b> &minus; Item navigation is forward only.</p></li>
+<li><p><b>Doubly Linked List</b> &minus; Items can be navigated forward and backward.</p></li>
+<li><p><b>Circular Linked List</b> &minus; Last item contains link of the first element as next and the first element has a link to the last element as previous.</p></li>
+</ul>
+<h4>Basic Operations</h4>
+<p>Following are the basic operations supported by a list.</p>
+<ul>
+<li><p><b>Insertion</b> &minus; Adds an element at the beginning of the list.</p></li>
+<li><p><b>Deletion</b> &minus; Deletes an element at the beginning of the list.</p></li>
+<li><p><b>Display</b> &minus; Displays the complete list.</p></li>
+<li><p><b>Search</b> &minus; Searches an element using the given key.</p></li>
+<li><p><b>Delete</b> &minus; Deletes an element using the given key.</p></li>
+</ul>
+<h4>Insertion Operation</h4>
+<p>Adding a new node in linked list is a more than one step activity. We shall learn this with diagrams here. First, create a node using the same structure and find the location where it has to be inserted.</p>
+<div align="center"><%= image_tag("linked_list_insertion_0.jpg", :alt => "Linked List Insertion") %></div>
+<p>Imagine that we are inserting a node <b>B</b> (NewNode), between <b>A</b> (LeftNode) and <b>C</b> (RightNode). Then point B.next to C &minus;</p>
+<pre>
+NewNode.next −&gt; RightNode;
+</pre>
+<p>It should look like this &minus;</p>
+<div align="center"><%= image_tag("linked_list_insertion_1.jpg", :alt => "Linked List Insertion") %></div>
+<p>Now, the next node at the left should point to the new node.</p>
+<div align="center"><%= image_tag("linked_list_insertion_2.jpg", :alt => "Linked List Insertion") %></div>
+<pre>
+LeftNode.next −&gt; NewNode;
+</pre> 
+<p>This will put the new node in the middle of the two. The new list should look like this &minus;</p>
+<div align="center"><%= image_tag("linked_list_insertion_3.jpg", :alt => "Linked List Insertion") %></div>
+<p>Similar steps should be taken if the node is being inserted at the beginning of the list. While inserting it at the end, the second last node of the list should point to the new node and the new node will point to NULL.</p>
+<h4>Deletion Operation</h4>
+<p>Deletion is also a more than one step process. We shall learn with pictorial representation. First, locate the target node to be removed, by using searching algorithms.</p>
+<div align="center"><%= image_tag("linked_list_deletion_0.jpg", :alt => "Linked List Deletion") %></div>
+<p>The left (previous) node of the target node now should point to the next node of the target node &minus;</p>
+<div align="center"><%= image_tag("linked_list_deletion_1.jpg", :alt => "Linked List Deletion") %></div>
+<pre>
+LeftNode.next −&gt; TargetNode.next;
+</pre> 
+<p>This will remove the link that was pointing to the target node. Now, using the following code, we will remove what the target node is pointing at.</p>
+<div align="center"><%= image_tag("linked_list_deletion_2.jpg", :alt => "Linked List Deletion") %></div>
+<pre>
+TargetNode.next −&gt; NULL;
+</pre>
+<p>We need to use the deleted node. We can keep that in memory otherwise we can simply deallocate memory and wipe off the target node completely.</p>
+<div align="center"><%= image_tag("linked_list_deletion_3.jpg", :alt => "Linked List Deletion") %></div>
+<h4>Reverse Operation</h4>
+<p>This operation is a thorough one. We need to make the last node to be pointed by the head node and reverse the whole linked list.</p>
+<div align="center"><%= image_tag("linked_list_reverse_0.jpg", :alt => "Linked List Reverse") %></div>
+<p>First, we traverse to the end of the list. It should be pointing to NULL. Now, we shall make it point to its previous node &minus;</p>
+<div align="center"><%= image_tag("linked_list_reverse_1.jpg", :alt => "Linked List Reverse") %></div>
+<p>We have to make sure that the last node is not the lost node. So we'll have some temp node, which looks like the head node pointing to the last node. Now, we shall make all left side nodes point to their previous nodes one by one.</p>
+<div align="center"><%= image_tag("linked_list_reverse_2.jpg", :alt => "Linked List Reverse") %></div>
+<p>Except the node (first node) pointed by the head node, all nodes should point to their predecessor, making them their new successor. The first node will point to NULL.</p>
+<div align="center"><%= image_tag("linked_list_reverse_3.jpg", :alt => "Linked List Reverse") %></div>
+<p>We'll make the head node point to the new first node by using the temp node.</p>
+<div align="center"><%= image_tag("linked_list_reverse_4.jpg", :alt => "Linked List Reverse") %></div>
+<p>The linked list is now reversed.</p>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

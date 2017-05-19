@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>Fibonacci series generates the subsequent number by adding two previous numbers. Fibonacci series starts from two numbers − <b>F<sub>0</sub> &amp; F<sub>1</sub></b>. The initial values of F<sub>0</sub> &amp; F<sub>1</sub> can be taken 0, 1 or 1, 1 respectively.</p>
+<p>Fibonacci series satisfies the following conditions &minus;</p>
+<pre>
+F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub>
+</pre>
+<p>Hence, a Fibonacci series can look like this &minus;</p>
+<p>F<sub>8</sub> = 0 1 1 2 3 5 8 13</p>
+<p>or, this &minus;</p>
+<p>F<sub>8</sub> = 1 1 2 3 5 8 13 21</p>
+<p>For illustration purpose, Fibonacci of F<sub>8</sub> is displayed as &minus;</p>
+<div align="center"><%= image_tag("fibonacci_animation.gif", :alt => "Fibonacci Series") %></div>
+<h4>Fibonacci Iterative Algorithm</h4>
+<p>First we try to draft the iterative algorithm for Fibonacci series.</p>
+<pre>
+Procedure Fibonacci(n)
+   declare f<sub>0</sub>, f<sub>1</sub>, fib, loop 
+   
+   set f<sub>0</sub> to 0
+   set f<sub>1</sub> to 1
+   
+   <b>display f<sub>0</sub>, f<sub>1</sub></b>
+   
+   for loop &larr; 1 to n
+   
+      fib &larr; f<sub>0</sub> &plus; f<sub>1</sub>   
+      f<sub>0</sub> &larr; f<sub>1</sub>
+      f<sub>1</sub> &larr; fib
+
+      <b>display fib</b>
+   end for
+	
+end procedure
+</pre>
+<h4>Fibonacci Recursive Algorithm</h4>
+<p>Let us learn how to create a recursive algorithm Fibonacci series. The base criteria of recursion.</p>
+<pre>
+START
+Procedure Fibonacci(n)
+   declare f<sub>0</sub>, f<sub>1</sub>, fib, loop 
+   
+   set f<sub>0</sub> to 0
+   set f<sub>1</sub> to 1
+   
+   <b>display f<sub>0</sub>, f<sub>1</sub></b>
+   
+   for loop &larr; 1 to n
+   
+      fib &larr; f<sub>0</sub> &plus; f<sub>1</sub>   
+      f<sub>0</sub> &larr; f<sub>1</sub>
+      f<sub>1</sub> &larr; fib
+
+      <b>display fib</b>
+   end for
+
+END
+</pre>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

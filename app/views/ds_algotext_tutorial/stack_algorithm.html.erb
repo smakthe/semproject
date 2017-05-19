@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>A stack is an Abstract Data Type (ADT), commonly used in most programming languages. It is named stack as it behaves like a real-world stack, for example – a deck of cards or a pile of plates, etc.</p>
+<div align="center"><%= image_tag("stack_example.jpg", :alt => "Stack Example") %></div>
+<p>A real-world stack allows operations at one end only. For example, we can place or remove a card or plate from the top of the stack only. Likewise, Stack ADT allows all data operations at one end only. At any given time, we can only access the top element of a stack.</p>
+<p>This feature makes it LIFO data structure. LIFO stands for Last-in-first-out. Here, the element which is placed (inserted or added) last, is accessed first. In stack terminology, insertion operation is called <b>PUSH</b> operation and removal operation is called <b>POP</b> operation.</p>
+<h4>Stack Representation</h4>
+<p>The following diagram depicts a stack and its operations &minus;</p>
+<div align="center"><%= image_tag("stack_representation.jpg", :alt => "Stack Representation") %></div>
+<p>A stack can be implemented by means of Array, Structure, Pointer, and Linked List. Stack can either be a fixed size one or it may have a sense of dynamic resizing. Here, we are going to implement stack using arrays, which makes it a fixed size stack implementation.</p>
+<h4>Basic Operations</h4>
+<p>Stack operations may involve initializing the stack, using it and then de-initializing it. Apart from these basic stuffs, a stack is used for the following two primary operations &minus;</p>
+<ul>
+<li><p><b>push()</b> &minus; Pushing (storing) an element on the stack.</p></li>
+<li><p><b>pop()</b> &minus; Removing (accessing) an element from the stack.</p></li>
+</ul>
+<p>When data is PUSHed onto stack.</p>
+<p>To use a stack efficiently, we need to check the status of stack as well. For the same purpose, the following functionality is added to stacks &minus;</p>
+<ul>
+<li><p><b>peek()</b> &minus; get the top data element of the stack, without removing it.</p></li>
+<li><p><b>isFull()</b> &minus; check if stack is full.</p></li>
+<li><p><b>isEmpty()</b> &minus; check if stack is empty.</p></li>
+</ul>
+<p>At all times, we maintain a pointer to the last PUSHed data on the stack. As this pointer always represents the top of the stack, hence named <b>top</b>. The <b>top</b> pointer provides top value of the stack without actually removing it.</p>
+<p>First we should learn about procedures to support stack functions &minus;</p>
+<h4>peek()</h4>
+<p>Algorithm of peek() function &minus;</p>
+<pre>
+begin procedure peek
+
+   return stack[top]
+   
+end procedure
+</pre>
+<p>Implementation of peek() function in C programming language &minus;</p>
+<p><b>Example</b></p>
+<pre>
+int peek() {
+   return stack[top];
+}
+</pre>
+<h4>isfull()</h4>
+<p>Algorithm of isfull() function &minus;</p>
+<pre>
+begin procedure isfull
+
+   if top equals to MAXSIZE
+      return true
+   else
+      return false
+   endif
+   
+end procedure
+</pre>
+<p>Implementation of isfull() function in C programming language &minus;</p>
+<p><b>Example</b></p>
+<pre>
+bool isfull() {
+   if(top == MAXSIZE)
+      return true;
+   else
+      return false;
+}
+</pre>
+<h4>isempty()</h4>
+<p>Algorithm of isempty() function &minus;</p>
+<pre>
+begin procedure isempty
+
+   if top less than 1
+      return true
+   else
+      return false
+   endif
+   
+end procedure
+</pre>
+<p>Implementation of isempty() function in C programming language is slightly different. We initialize top at -1, as the index in array starts from 0. So we check if the top is below zero or -1 to determine if the stack is empty. Here's the code &minus;</p>
+<p><b>Example</b></p>
+<pre>
+bool isempty() {
+   if(top == -1)
+      return true;
+   else
+      return false;
+}
+</pre>
+<h4>Push Operation</h4>
+<p>The process of putting a new data element onto stack is known as a Push Operation. Push operation involves a series of steps &minus;</p>
+<ul>
+<li><p><b>Step 1</b> &minus; Checks if the stack is full.</p></li>
+<li><p><b>Step 2</b> &minus; If the stack is full, produces an error and exit.</p></li>
+<li><p><b>Step 3</b> &minus; If the stack is not full, increments <b>top</b> to point next empty space.</p></li>
+<li><p><b>Step 4</b> &minus; Adds data element to the stack location, where top is pointing.</p></li>
+<li><p><b>Step 5</b> &minus; Returns success.</p></li>
+<div align="center"><%= image_tag("stack_push_operation.jpg", :alt => "Stack Push") %><div align="center">
+</ul>
+<p>If the linked list is used to implement the stack, then in step 3, we need to allocate space dynamically.</p>
+<h4>Algorithm for PUSH Operation</h4>
+<p>A simple algorithm for Push operation can be derived as follows &minus;</p>
+<pre>
+begin procedure push: stack, data
+
+   if stack is full
+      return null
+   endif
+   
+   top &larr; top + 1
+   
+   stack[top] &larr; data
+
+end procedure
+</pre>
+<p>Implementation of this algorithm in C, is very easy. See the following code &minus;</p>
+<p><b>Example</b></p>
+<pre>
+void push(int data) {
+   if(!isFull()) {
+      top = top &plus; 1;   
+      stack[top] = data;
+   } else {
+      printf("Could not insert data, Stack is full.\n");
+   }
+}
+</pre>
+<h4>Pop Operation</h4>
+<p>Accessing the content while removing it from the stack, is known as a Pop Operation. In an array implementation of pop() operation, the data element is not actually removed, instead <b>top</b> is decremented to a lower position in the stack to point to the next value. But in linked-list implementation, pop() actually removes data element and deallocates memory space.</p>
+<p>A Pop operation may involve the following steps &minus;</p>
+<ul>
+<li><p><b>Step 1</b> &minus; Checks if the stack is empty.</p></li>
+<li><p><b>Step 2</b> &minus; If the stack is empty, produces an error and exit.</p></li>
+<li><p><b>Step 3</b> &minus; If the stack is not empty, accesses the data element at which <b>top</b> is pointing.</p></li>
+<li><p><b>Step 4</b> &minus; Decreases the value of top by 1.</p></li>
+<li><p><b>Step 5</b> &minus; Returns success.</p></li>
+<div align="center"><%= image_tag("stack_pop_operation.jpg", :alt => "Stack Pop") %><div align="center">
+</ul>
+<h4>Algorithm for Pop Operation</h4>
+<p>A simple algorithm for Pop operation can be derived as follows &minus;</p>
+<pre>
+begin procedure pop: stack
+
+   if stack is empty
+      return null
+   endif
+   
+   data &larr; stack[top]
+   
+   top &larr; top - 1
+   
+   return data
+
+end procedure
+</pre>
+<p>Implementation of this algorithm in C, is as follows &minus;</p>
+<p><b>Example</b></p>
+<pre>
+int pop(int data) {
+
+   if(!isempty()) {
+      data = stack[top];
+      top = top - 1;   
+      return data;
+   } else {
+      printf("Could not retrieve data, Stack is empty.\n");
+   }
+}
+</pre> 
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems-Linux</h4>
+<p>Linux is one of popular version of UNIX operating System. It is open source as its source code is freely available. It is free to use. Linux was designed considering UNIX compatibility. Its functionality list is quite similar to that of UNIX.</p>
+<h4>Components of Linux System</h4>
+<p>Linux Operating System has primarily three components</p>
+<ul class="list">
+<li><p><b>Kernel</b> &minus; Kernel is the core part of Linux. It is responsible for all major activities of this operating system. It consists of various modules and it interacts directly with the underlying hardware. Kernel provides the required abstraction to hide low level hardware details to system or application programs.</p></li>
+<li><p><b>System Library</b> &minus; System libraries are special functions or programs using which application programs or system utilities accesses Kernel's features. These libraries implement most of the functionalities of the operating system and do not requires kernel module's code access rights.</p></li>
+<li><p><b>System Utility</b> &minus; System Utility programs are responsible to do specialized, individual level tasks.</p></li>
+</ul>
+<div align="center"><%= image_tag("linux_os.jpg", :alt => "Linux OS") %></div>
+<h4>Kernel Mode vs User Mode</h4>
+<p>Kernel component code executes in a special privileged mode called <b>kernel mode</b> with full access to all resources of the computer. This code represents a single process, executes in single address space and do not require any context switch and hence is very efficient and fast. Kernel runs each processes and provides system services to processes, provides protected access to hardware to processes.</p>
+<p>Support code which is not required to run in kernel mode is in System Library. User programs and other system programs works in <b>User Mode</b> which has no access to system hardware and kernel code. User programs/ utilities use System libraries to access Kernel functions to get system's low level tasks.</p>
+<h4>Basic Features</h4>
+<p>Following are some of the important features of Linux Operating System.</p>
+<ul class="list">
+<li><p><b>Portable</b> &minus; Portability means software can works on different types of hardware in same way. Linux kernel and application programs supports their installation on any kind of hardware platform.</p></li>
+<li><p><b>Open Source</b> &minus; Linux source code is freely available and it is community based development project. Multiple teams work in collaboration to enhance the capability of Linux operating system and it is continuously evolving.</p></li>
+<li><p><b>Multi-User</b> &minus; Linux is a multiuser system means multiple users can access system resources like memory/ ram/ application programs at same time.</p></li>
+<li><p><b>Multiprogramming</b> &minus; Linux is a multiprogramming system means multiple applications can run at same time.</p></li>
+<li><p><b>Hierarchical File System</b> &minus; Linux provides a standard file structure in which system files/ user files are arranged.</p></li>
+<li><p><b>Shell</b> &minus; Linux provides a special interpreter program which can be used to execute commands of the operating system. It can be used to do various types of operations, call application programs. etc.</p></li>
+<li><p><b>Security</b> &minus; Linux provides user security using authentication features like password protection/ controlled access to specific files/ encryption of data.</p></li>
+</ul>
+<h4>Architecture</h4>
+<p>The following illustration shows the architecture of a Linux system &minus;</p>
+<div align="center"><%= image_tag("linux_architechture.jpg", :alt => "Linux Architecture") %></div>
+<p>The architecture of a Linux System consists of the following layers &minus;</p>
+<ul class="list">
+<li><p><b>Hardware layer</b> &minus; Hardware consists of all peripheral devices (RAM/ HDD/ CPU etc).</p></li>
+<li><p><b>Kernel</b> &minus; It is the core component of Operating System, interacts directly with hardware, provides low level services to upper layer components.</p></li>
+<li><p><b>Shell</b> &minus; An interface to kernel, hiding complexity of kernel's functions from users. The shell takes commands from the user and executes kernel's functions.</p></li>
+<li><p><b>Utilities</b> &minus; Utility programs that provide the user most of the functionalities of an operating systems.</p></li>
+</ul>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

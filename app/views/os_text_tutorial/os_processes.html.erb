@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems Processes</h4>
+<h7>Process</h7>
+<p>A process is basically a program in execution. The execution of a process must progress in a sequential fashion.</p>
+<blockquote>A process is defined as an entity which represents the basic unit of work to be implemented in the system.</blockquote>
+<p>To put it in simple terms, we write our computer programs in a text file and when we execute this program, it becomes a process which performs all the tasks mentioned in the program.</p>
+<p>When a program is loaded into the memory and it becomes a process, it can be divided into four sections ─ stack, heap, text and data. The following image shows a simplified layout of a process inside main memory &minus;</p>
+<div align="center"><%= image_tag("process_components.jpg", :alt => "Process Components") %></div>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:30%; text-align:center;">S.N.</th>
+<th style="tstyle=width:30%; text-align:center;">Component &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><p><b>Stack</b></p>
+<p>The process Stack contains the temporary data such as method/function parameters, return address and local variables.</p>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td><p><b>Heap</b></p>
+<p>This is dynamically allocated memory to a process during its run time.</p>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td><p><b>Text</b></p>
+<p>This includes the current activity represented by the value of Program Counter and the contents of the processor's registers.</p>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td><p><b>Data</b></p>
+<p>This section contains the global and static variables.</p>
+</td>
+</tr>
+</table>
+</div>
+<h7>Program</h7>
+<p>A program is a piece of code which may be a single line or millions of lines. A computer program is usually written by a computer programmer in a programming language. For example, here is a simple program written in C programming language &minus;</p>
+<pre class="prettyprint notranslate">
+#include &lt;stdio.h&gt;
+
+int main() {
+   printf("Hello, World! \n");
+   return 0;
+}
+</pre>
+<p>A computer program is a collection of instructions that performs a specific task when executed by a computer. When we compare a program with a process, we can conclude that a process is a dynamic instance of a computer program.</p>
+<p>A part of a computer program that performs a well-defined task is known as an <b>algorithm</b>. A collection of computer programs, libraries and related data are referred to as a <b>software</b>.</p>
+<h7>Process Life Cycle</h7>
+<p> When a process executes, it passes through different states. These stages may differ in different operating systems, and the names of these states are also not standardized.</p>
+<p>In general, a process can have one of the following five states at a time.</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:30%; text-align:center;">S.N.</th>
+<th style="tstyle=width:30%; text-align:center;">State &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td>
+<p><b>Start</b></p>
+<p>This is the initial state when a process is first started/created.</p>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>
+<p><b>Ready</b></p>
+<p>The process is waiting to be assigned to a processor. Ready processes are waiting to have the processor allocated to them by the operating system so that they can run. Process may come into this state after <b>Start</b> state or while running it by but interrupted by the scheduler to assign CPU to some other process.</p>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td><p><b>Running</b></p>
+<p>Once the process has been assigned to a processor by the OS scheduler, the process state is set to running and the processor executes its instructions.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><p><b>Waiting</b></p> 
+<p>Process moves into the waiting state if it needs to wait for a resource, such as waiting for user input, or waiting for a file to become available.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><p><b>Terminated or Exit</b></p>
+<p>Once the process finishes its execution, or it is terminated by the operating system, it is moved to the terminated state where it waits to be removed from main memory.</p></td>
+</tr>
+</table>
+</div>
+<div align="center"><%= image_tag("process_state.jpg", :alt => "Process State") %></div>
+<h7>Process Control Block (PCB)</h7>
+<p>A Process Control Block is a data structure maintained by the Operating System for every process. The PCB is identified by an integer process ID (PID). A PCB keeps all the information needed to keep track of a process as listed below in the table &minus;</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:30%; text-align:center;">S.N.</th>
+<th style="width:30%; text-align:center;">Information &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><p><b>Process State</b></p>
+<p>The current state of the process i.e., whether it is ready, running, waiting, or whatever.</p>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td><p><b>Process privileges</b></p>
+<p>This is required to allow/disallow access to system resources.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><p><b>Process ID</b></p>
+<p>Unique identification for each of the process in the operating system.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><p><b>Pointer</b></p>
+<p>A pointer to parent process.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><p><b>Program Counter</b></p>
+<p>Program Counter is a pointer to the address of the next instruction to be executed for this process.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><p><b>CPU registers</b></p>
+<p>Various CPU registers where process need to be stored for execution for running state.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><p><b>CPU Scheduling Information</b></p> 
+<p>Process priority and other scheduling information  which is required to schedule the process.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><p><b>Memory management information</b></p> 
+<p>This includes the information of page table, memory limits, Segment table depending on memory used by the operating system.</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td><p><b>Accounting information</b></p>
+<p>This  includes the amount of CPU used for process execution, time limits, execution ID etc.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><p><b>IO status information</b></p>
+<p>This includes a list of I/O devices allocated to the process.</p></td>
+</tr>
+</table>
+<p>The architecture of a PCB is completely dependent on Operating System and may contain different information in different operating systems. Here is a simplified diagram of a PCB &minus;</p>
+<div align="center"><%= image_tag("pcb.jpg", :alt => "PCB") %></div>
+<p>The PCB is maintained for a process throughout its lifetime, and is deleted once the process terminates.</p>
+<hr />
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

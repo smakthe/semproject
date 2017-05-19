@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems I/O Hardware</h4>
+<p>One of the important jobs of an Operating System is to manage various I/O devices including mouse, keyboards, touch pad, disk drives, display adapters, USB devices, Bit-mapped screen, LED, Analog-to-digital converter, On/off switch, network connections, audio I/O, printers etc.</p>
+<p>An I/O system is required to take an application I/O request and send it to the physical device, then take whatever response comes back from the device and send it to the application. I/O devices can be divided into two categories &minus;</p>
+<ul class="list">
+<li><p><b>Block devices</b> &minus; A block device is one with which the driver communicates by sending entire blocks of data. For example, Hard disks, USB cameras, Disk-On-Key etc.</p></li>
+<li><p><b>Character devices</b> &minus; A character device is one with which the driver communicates by sending and receiving single characters (bytes, octets). For example, serial ports, parallel ports, sounds cards etc</p></li>
+</ul>
+<h7>Device Controllers</h7>
+<p>Device drivers are software modules that can be plugged into an OS to handle a particular device. Operating System takes help from device drivers to handle all I/O devices.</p>
+<p>The Device Controller works like an interface between a device and a device driver. I/O units (Keyboard, mouse, printer, etc.) typically consist of a mechanical component and an electronic component where electronic component is called the device controller.</p>
+<p>There is always a device controller and a device driver for each device to communicate with the Operating Systems. A device controller may be able to handle multiple devices. As an interface its main task is to convert serial bit stream to block of bytes, perform error correction as necessary.</p>
+<p>Any device connected to the computer is connected by a plug and socket, and the socket is connected to a device controller. Following is a model for connecting the CPU, memory, controllers, and I/O devices where CPU and device controllers all use a common bus for communication.</p>
+<div align="center"><%= image_tag("device_controllers.jpg", :alt => "Device Controllers") %></div>
+<h7>Synchronous vs asynchronous I/O</h7> 
+<ul class="list">
+<li><p><b>Synchronous I/O</b> &minus; In this scheme CPU execution waits while I/O proceeds</p></li>
+<li><p><b>Asynchronous I/O</b> &minus; I/O proceeds concurrently with CPU execution</p></li>
+</ul>
+<h7>Communication to I/O Devices</h7>
+<p>The CPU must have a way to pass information to and from an I/O device. There are three approaches available to communicate with the CPU and Device.</p>
+<ul class="list">
+<li>Special Instruction I/O</li>
+<li>Memory-mapped I/O</li>
+<li>Direct memory access (DMA)</li>
+</ul>
+<h7>Special Instruction I/O</h7>
+<p>This uses CPU instructions that are specifically made for controlling I/O devices. These instructions typically allow data to be sent to an I/O device or read from an I/O device.</p>
+<h7>Memory-mapped I/O</h7>
+<p>When using memory-mapped I/O, the same address space is shared by memory and I/O devices. The device is connected directly to certain main memory locations so that I/O device can transfer block of data to/from memory without going through CPU.</p>
+<div align="center"><%= image_tag("memory_mapped_io.jpg", :alt => "Memory Mapped IO") %></div>
+<p>While using memory mapped IO, OS allocates buffer in memory and informs I/O device to use that buffer to send data to the CPU. I/O device operates asynchronously with CPU, interrupts CPU when finished.</p>
+<p>The advantage to this method is that every instruction which can access memory can be used to manipulate an I/O device. Memory mapped IO is used for most high-speed I/O devices like disks, communication interfaces.</p>
+<h7>Direct Memory Access (DMA)</h7>
+<p>Slow devices like keyboards will generate an interrupt to the main CPU after each byte is transferred. If a fast device such as a disk generated an interrupt for each byte, the operating system would spend most of its time handling these interrupts. So a typical computer uses direct memory access (DMA) hardware to reduce this overhead.</p>
+<p>Direct Memory Access (DMA) means CPU grants I/O module authority to read from or write to memory without involvement. DMA module itself controls exchange of data between main memory and the I/O device. CPU is only involved at the beginning and end of the transfer and interrupted only after entire block has been transferred.</p>
+<p>Direct Memory Access needs a special hardware called DMA controller (DMAC) that manages the data transfers and arbitrates access to the system bus. The controllers are programmed with source and destination pointers (where to read/write the data), counters to track the number of transferred bytes, and settings, which includes I/O and memory types, interrupts and states for the CPU cycles.</p>
+<div align="center"><%= image_tag("dma.jpg", :alt => "DMA") %></div>
+<p>The operating system uses the DMA hardware as follows &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="width:5%;">Step</th>
+<th style="text-align:center">Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Device driver is instructed to transfer disk data to a buffer address X.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Device driver then instruct disk controller to transfer data to buffer.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Disk controller starts DMA transfer.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Disk controller sends each byte to DMA controller.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DMA controller transfers bytes to buffer, increases the memory address, decreases the counter C until C becomes zero.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>When C becomes zero, DMA interrupts CPU to signal transfer completion.</td>
+</tr>
+</table>
+<h7>Polling vs Interrupts I/O</h7> 
+<p>A computer must have a way of detecting the arrival of any type of input. There are two ways that this can happen, known as <b>polling</b> and <b>interrupts</b>. Both of these techniques allow the processor to deal with events that can happen at any time and that are not related to the process it is currently running.</p>
+<h7>Polling I/O</h7>
+<p>Polling is the simplest way for an I/O device to communicate with the processor the processor. The process of periodically checking status of the device to see if it is time for the next I/O operation, is called polling. The I/O device simply puts the information in a Status register, and the processor must come and get the information.</p>
+<p>Most of the time, devices will not require attention and when one does it will have to wait until it is next interrogated by the polling program. This is an inefficient method and much of the processors time is wasted on unnecessary polls.</p>
+<p>Compare this method to a teacher continually asking every student in a class, one after another, if they need help. Obviously the more efficient method would be for a student to inform the teacher whenever they require assistance.</p>
+<h7>Interrupts I/O</h7>
+<p>An alternative scheme for dealing with I/O is the interrupt-driven method. An interrupt is a signal to the microprocessor from a device that requires attention.</p>
+<p>A device controller puts an interrupt signal on the bus when it needs CPU’s attention when CPU receives an interrupt, It saves its current state and invokes the appropriate interrupt handler using the interrupt vector (addresses of OS routines to handle various events). When the interrupting device has been dealt with, the CPU continues with its original task as if it had never been interrupted.</p>
+<hr />
+</body>
+</html>

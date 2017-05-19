@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+	  <center><h7>-an online study point</h7></center>
+	   <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output. Algorithms are generally created independent of underlying languages, i.e. an algorithm can be implemented in more than one programming language.</p>
+<p>From the data structure point of view, following are some important categories of algorithms &minus;</p>
+<ul>
+<li><p><b>Search</b> &minus; Algorithm to search an item in a data structure.</p></li>
+<li><p><b>Sort</b> &minus; Algorithm to sort items in a certain order.</p></li>
+<li><p><b>Insert</b> &minus; Algorithm to insert item in a data structure.</p></li>
+<li><p><b>Update</b> &minus;  Algorithm to update an existing item in a data structure.</p></li>
+<li><p><b>Delete</b> &minus; Algorithm to delete an existing item from a data structure.</p></li>
+</ul>
+<h4>Characteristics of an Algorithm</h4>
+<p>Not all procedures can be called an algorithm. An algorithm should have the following characteristics &minus;</p>
+<ul>
+<li><p><b>Unambiguous</b> &minus; Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.</p></li>
+<li><p><b>Input</b> &minus; An algorithm should have 0 or more well-defined inputs.</p></li>
+<li><p><b>Output</b> &minus; An algorithm should have 1 or more well-defined outputs, and should match the desired output.</p></li>
+<li><p><b>Finiteness</b> &minus; Algorithms must terminate after a finite number of steps.</p></li>
+<li><p><b>Feasibility</b> &minus; Should be feasible with the available resources.</p></li>
+<li><p><b>Independent</b> &minus; An algorithm should have step-by-step directions, which should be independent of any programming code.</p></li>
+</ul>
+<h4>How to Write an Algorithm?</h4>
+<p>There are no well-defined standards for writing algorithms. Rather, it is problem and resource dependent. Algorithms are never written to support a particular programming code.</p>
+<p>As we know that all programming languages share basic code constructs like loops (do, for, while), flow-control (if-else), etc. These common constructs can be used to write an algorithm.</p>
+<p>We write algorithms in a step-by-step manner, but it is not always the case. Algorithm writing is a process and is executed after the problem domain is well-defined. That is, we should know the problem domain, for which we are designing a solution.</p>
+<h4>Example</h4>
+<p>Let's try to learn algorithm-writing by using an example.</p>
+<p><b>Problem</b> &minus; Design an algorithm to add two numbers and display the result.</p>
+<pre><b>step 1</b> &minus; START
+<b>step 2</b> &minus; declare three integers <b>a</b>, <b>b</b> &amp; <b>c</b>
+<b>step 3</b> &minus; define values of <b>a</b> &amp; <b>b</b>
+<b>step 4</b> &minus; add values of <b>a</b> &amp; <b>b</b>
+<b>step 5</b> &minus; store output of <u>step 4</u> to <b>c</b>
+<b>step 6</b> &minus; print <b>c</b>
+<b>step 7</b> &minus; STOP
+</pre>
+<p>Algorithms tell the programmers how to code the program. Alternatively, the algorithm can be written as &minus;</p>
+<pre>
+<b>step 1</b> &minus; START ADD
+<b>step 2</b> &minus; get values of <b>a</b> &amp; <b>b</b>
+<b>step 3</b> &minus; c &larr; a &plus; b
+<b>step 4</b> &minus; display c
+<b>step 5</b> &minus; STOP
+</pre>
+<p>In design and analysis of algorithms, usually the second method is used to describe an algorithm. It makes it easy for the analyst to analyze the algorithm ignoring all unwanted definitions. He can observe what operations are being used and how the process is flowing.</p>
+<p>Writing <b>step numbers</b>, is optional.</p>
+<p>We design an algorithm to get a solution of a given problem. A problem can be solved in more than one ways.</p>
+<div align = "center"><%= image_tag("problem_solutions.jpg", :alt => "Problems and Solutions") %></div>
+<p>Hence, many solution algorithms can be derived for a given problem. The next step is to analyze those proposed solution algorithms and implement the best suitable solution.</p>
+<h4>Algorithm Analysis</h4>
+<p>Efficiency of an algorithm can be analyzed at two different stages, before implementation and after implementation. They are the following &minus;</p>
+<ul>
+<li><p><b>A Priori Analysis</b> &minus; This is a theoretical analysis of an algorithm. Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.</p></li>
+<li><p><b>A Posterior Analysis</b> &minus; This is an empirical analysis of an algorithm. The selected algorithm is implemented using programming language. This is then executed on target computer machine. In this analysis, actual statistics like running time and space required, are collected.</p></li>
+</ul>
+<p>We shall learn about a priori algorithm analysis. Algorithm analysis deals with the execution or running time of various operations involved. The running time of an operation can be defined as the number of computer instructions executed per operation.</p>
+<h4>Algorithm Complexity</h4>
+<p>Suppose <b>X</b> is an algorithm and <b>n</b> is the size of input data, the time and space used by the algorithm X are the two main factors, which decide the efficiency of X.</p>
+<ul>
+<li><p><b>Time Factor</b> &minus; Time is measured by counting the number of key operations such as comparisons in the sorting algorithm.</p></li>
+<li><p><b>Space Factor</b> &minus; Space is measured by counting the maximum memory space required by the algorithm.</p></li>
+</ul>
+<p>The complexity of an algorithm <b>f(n)</b> gives the running time and/or the storage space required by the algorithm in terms of <b>n</b> as the size of input data.</p>
+<h4>Space Complexity</h4>
+<p>Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. The space required by an algorithm is equal to the sum of the following two components &minus;</p>
+<ul>
+<li><p>A fixed part that is a space required to store certain data and variables, that are independent of the size of the problem. For example, simple variables and constants used, program size, etc.</p></li>
+<li><p>A variable part is a space required by variables, whose size depends on the size of the problem. For example, dynamic memory allocation, recursion stack space, etc.</p></li>
+</ul>
+<p>Space complexity S(P) of any algorithm P is S(P) = C &plus; SP(I), where C is the fixed part and S(I) is the variable part of the algorithm, which depends on instance characteristic I. Following is a simple example that tries to explain the concept &minus;</p>
+<pre>
+Algorithm: SUM(A, B)
+Step 1 -  START
+Step 2 -  C &larr; A &plus; B &plus; 10
+Step 3 -  Stop
+</pre>
+<p>Here we have three variables A, B, and C and one constant. Hence S(P) = 1 &plus; 3. Now, space depends on data types of given variables and constant types and it will be multiplied accordingly.</p>
+<h4>Time Complexity</h4>
+<p>Time complexity of an algorithm represents the amount of time required by the algorithm to run to completion. Time requirements can be defined as a numerical function T(n), where T(n) can be measured as the number of steps, provided each step consumes constant time.</p>
+<p>For example, addition of two n-bit integers takes <b>n</b> steps. Consequently, the total computational time is T(n) = c &lowast; n, where c is the time taken for the addition of two bits. Here, we observe that T(n) grows linearly as the input size increases.</p>
+<hr />
+</td></tr>
+</table>
+</div>
+</div>
+</td>
+</body>
+</html>

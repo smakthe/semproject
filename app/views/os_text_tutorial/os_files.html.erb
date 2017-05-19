@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems File System</h4>
+<h7>File</h7>
+<p>A file is a named collection of related information that is recorded on secondary storage such as magnetic disks, magnetic tapes and optical disks. In general, a file is a sequence of bits, bytes, lines or records whose meaning is defined by the files creator and user.</p>
+<h7>File Structure</h7>
+<p>A File Structure should be according to a required format that the operating system can understand.</p>
+<ul class="list">
+<li><p>A file has a certain defined structure according to its type.</p></li>
+<li><p>A text file is a sequence of characters organized into lines.</p></li>
+<li><p>A source file is a sequence of procedures and functions.</p></li>
+<li><p>An object file is a sequence of bytes organized into blocks that are understandable by the machine.</p></li>
+<li><p>When operating system defines different file structures, it also contains the code to support these file structure. Unix, MS-DOS support minimum number of file structure.</p></li>
+</ul>
+<h7>File Type</h7>
+<p>File type refers to the ability of the operating system to distinguish different types of file such as text files source files and binary files etc. Many operating systems support many types of files. Operating system like MS-DOS and UNIX have the following types of files &minus;</p>
+<h7>Ordinary files</h7>
+<ul class="list">
+<li>These are the files that contain user information.</li>
+<li>These may have text, databases or executable program.</li>
+<li>The user can apply various operations on such files like add, modify, delete or even remove the entire file.</li>
+</ul>
+<h7>Directory files</h7>
+<ul class="list">
+<li>These files contain list of file names and other information related to these files.</li>
+</ul>
+<h7>Special files</h7>
+<ul class="list">
+<li>These files are also known as device files.</li>
+<li>These files represent physical device like disks, terminals, printers, networks, tape drive etc.</li>
+</ul>
+<p>These files are of two types &minus;</p>
+<ul class="list">
+<li><p><b>Character special files</b> &minus; data is handled character by character as in case of terminals or printers.</p></li>
+<li><p><b>Block special files</b> &minus; data is handled in blocks as in the  case of disks and tapes.</p></li>
+</ul>
+<h7>File Access Mechanisms</h7>
+<p>File access mechanism refers to the manner in which the records of a file may be accessed. There are several ways to access files &minus;</p>
+<ul class="list">
+<li>Sequential access</li>
+<li>Direct/Random access</li>
+<li>Indexed sequential access</li>
+</ul>
+<h7>Sequential access</h7>
+<p>A sequential access is that in which the records are accessed in some sequence, i.e., the information in the file is processed in order, one record after the other. This access method is the most primitive one. Example: Compilers usually access files in this fashion.</p>
+<h7>Direct/Random access</h7>
+<ul class="list">
+<li><p>Random access file organization provides, accessing the records directly.</p></li>
+<li><p>Each record has its own address on the file with by the help of which it can be directly accessed for reading or writing.</p></li>
+<li><p>The records need not be in any sequence within the file and they need not be in adjacent locations on the storage medium.</p></li>
+</ul>
+<h7>Indexed sequential access</h7>
+<ul class="list">
+<li>This mechanism is built up on base of sequential access.</li>
+<li>An index is created for each file which contains pointers to various blocks.</li>
+<li>Index is searched sequentially and its pointer is used to access the file directly.</li>
+</ul>
+<h7>Space Allocation</h7>
+<p>Files are allocated disk spaces by operating system. Operating systems deploy following three main ways to allocate disk space to files.</p>
+<ul class="list">
+<li>Contiguous Allocation</li>
+<li>Linked Allocation</li>
+<li>Indexed Allocation</li>
+</ul>
+<h7>Contiguous Allocation</h7>
+<ul class="list">
+<li>Each file occupies a contiguous address space on disk.</li>
+<li>Assigned disk address is in linear order.</li>
+<li>Easy to implement.</li>
+<li>External fragmentation is a major issue with this type of allocation technique.</li>
+</ul>
+<h7>Linked Allocation</h7> 
+<ul class="list">
+<li>Each file carries a list of links to disk blocks.</li>
+<li>Directory contains link / pointer to first block of a file.</li>
+<li>No external fragmentation</li>
+<li>Effectively used in sequential access file.</li>
+<li>Inefficient in case of  direct access file.</li>
+</ul>
+<h7>Indexed Allocation</h7> 
+<ul class="list">
+<li>Provides solutions to problems of contigous and linked allocation.</li>
+<li>A index block is created having all pointers to files.</li>
+<li>Each file has its own index block which stores the addresses of disk space occupied by the file.</li>
+<li>Directory contains the addresses of index blocks of files.</li>
+</ul>
+<hr />
+</body>
+</html>

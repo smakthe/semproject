@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>Doubly Linked List is a variation of Linked list in which navigation is possible in both ways, either forward and backward easily as compared to Single Linked List. Following are the important terms to understand the concept of doubly linked list.</p>
+<ul>
+<li><p><b>Link</b> &minus; Each link of a linked list can store a data called an element.</p></li>
+<li><p><b>Next</b> &minus; Each link of a linked list contains a link to the next link called Next.</p></li>
+<li><p><b>Prev</b> &minus; Each link of a linked list contains a link to the previous link called Prev.</p></li>
+<li><p><b>LinkedList</b> &minus; A Linked List contains the connection link to the first link called First and to the last link called Last.</p></li>
+</ul>
+<h4>Doubly Linked List Representation</h4>
+<div align="center"><%= image_tag("doubly_linked_list.jpg", :alt => " Doubly Linked List") %></div>
+<p>As per the above illustration, following are the important points to be considered.</p>
+<ul>
+<li><p>Doubly Linked List contains a link element called first and last.</p></li>
+<li><p>Each link carries a data field(s) and two link fields called next and prev.</p></li>
+<li><p>Each link is linked with its next link using its next link.</p></li>
+<li><p>Each link is linked with its previous link using its previous link.</p></li>
+<li><p>The last link carries a link as null to mark the end of the list.</p></li>
+</ul>
+<h4>Basic Operations</h4>
+<p>Following are the basic operations supported by a list.</p>
+<ul>
+<li><p><b>Insertion</b> &minus; Adds an element at the beginning of the list.</p></li>
+<li><p><b>Deletion</b> &minus; Deletes an element at the beginning of the list.</p></li>
+<li><p><b>Insert Last</b> &minus; Adds an element at the end of the list.</p></li>
+<li><p><b>Delete Last</b> &minus; Deletes an element from the end of the list.</p></li>
+<li><p><b>Insert After</b> &minus; Adds an element after an item of the list.</p></li>
+<li><p><b>Delete</b> &minus; Deletes an element from the list using the key.</p></li>
+<li><p><b>Display forward</b> &minus; Displays the complete list in a forward manner.</p></li>
+<li><p><b>Display backward</b> &minus; Displays the complete list in a backward manner.</p></li>
+</ul>
+<h4>Insertion Operation</h4>   
+<p>Following code demonstrates the insertion operation at the beginning of a doubly linked list.</p>
+<h4>Example</h4>
+<pre>
+//insert link at the first location
+void insertFirst(int key, int data) {
+
+   //create a link
+   struct node *link = (struct node*) malloc(sizeof(struct node));
+   link-&gt;key = key;
+   link-&gt;data = data;
+	
+   if(isEmpty()) {
+      //make it the last link
+      last = link;
+   } else {
+      //update first prev link
+      head-&gt;prev = link;
+   }
+
+   //point it to old first link
+   link-&gt;next = head;
+	
+   //point first to new first link
+   head = link;
+}
+</pre>
+<h4>Deletion Operation</h4>
+<p>Following code demonstrates the deletion operation at the beginning of a doubly linked list.</p>
+<h4>Example</h4>
+<pre>
+//delete first item
+struct node* deleteFirst() {
+
+   //save reference to first link
+   struct node *tempLink = head;
+	
+   //if only one link
+   if(head-&gt;next == NULL) {
+      last = NULL;
+   } else {
+      head-&gt;next-&gt;prev = NULL;
+   }
+	
+   head = head-&gt;next;
+	
+   //return the deleted link
+   return tempLink;
+}
+</pre>
+<h4>Insertion at the End of an Operation</h4>
+<p>Following code demonstrates the insertion operation at the last position of a doubly linked list.</p>
+<h4>Example</h4>
+<pre>
+//insert link at the last location
+void insertLast(int key, int data) {
+
+   //create a link
+   struct node *link = (struct node*) malloc(sizeof(struct node));
+   link-&gt;key = key;
+   link-&gt;data = data;
+	
+   if(isEmpty()) {
+      //make it the last link
+      last = link;
+   } else {
+      //make link a new last link
+      last-&gt;next = link;     
+      
+      //mark old last node as prev of new link
+      link-&gt;prev = last;
+   }
+
+   //point last to new last node
+   last = link;
+}
+</pre>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

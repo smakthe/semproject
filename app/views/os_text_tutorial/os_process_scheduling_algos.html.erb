@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating Systems</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:400px;width:280px;float:left;">
+<meta name="description" content="Operating System Tutorial for Beginners:A beginner's tutorial containing complete knowledge about an operating system starting from its Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, and Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux.Created by Shayeri Das,M.sc 4th sem,BHU-2015-17,4th semester project" />
+<meta name="Keywords" content="Operating System, Tutorials, Learning, Beginners, Basics, Definition, Functions, Conceptual View, Program Execution, Program Execution, Communication, Error Handling, User Account Management, Multitasking, Real Time System, Process, Program, Memory Management, Security, Overview, Types, Services, Properties, Processes, Process Scheduling, Scheduling Algorithms, Multithreading, Virtual Memory, I/O Hardware, I/O Software, File System, Linux." />
+<ul>
+<class>Operating System Contents:</class>
+<li><%= link_to 'Home', os_home_path%></li>
+<li><%= link_to 'Overview', os_overview_path%></li>
+<li><%= link_to 'Types', os_types_path%></li>
+<li><%= link_to 'Services', os_services_path%></li>
+<li><%= link_to 'Properties', os_properties_path%></li>
+<li><%= link_to 'Processes', os_processes_path%></li>
+<li><%= link_to 'Process Scheduling', os_process_scheduling_path%></li>
+<li><%= link_to 'Scheduling Algorithms', os_process_scheduling_algorithms_path%></li> 
+<li><%= link_to 'Multi-threading', os_multi_threading_path%></li>
+<li><%= link_to 'Memory Management', os_memory_mgmt_path%></li>
+<li><%= link_to 'Virtual Memory', os_virtual_memory_path%></li>
+<li><%= link_to 'I/O Hardware', os_io_hw_path%></li>
+<li><%= link_to 'I/O Software', os_io_sw_path%></li>
+<li><%= link_to 'File System', os_files_path%></li>
+<li><%= link_to 'Security', os_security_path%></li>
+<li><%= link_to 'Linux', os_linux_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:1000px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Operating Systems Process Scheduling Algorithms</h4>
+<p>A Process Scheduler schedules different processes to be assigned to the CPU based on particular scheduling algorithms. There are six popular process scheduling algorithms which we are going to discuss in this chapter &minus;</p>
+<ul>
+<li>First-Come, First-Served (FCFS) Scheduling</li>
+<li>Shortest-Job-Next (SJN) Scheduling</li>
+<li>Priority Scheduling</li>
+<li>Shortest Remaining Time</li>
+<li>Round Robin(RR) Scheduling</li>
+<li>Multiple-Level Queues Scheduling</li>
+</ul>
+<p>These algorithms are either <b>non-preemptive or preemptive</b>. Non-preemptive
+algorithms are designed so that once a process enters the running state, it cannot be preempted until it completes its allotted time, whereas the preemptive scheduling is based on priority where a scheduler may preempt a low priority running process anytime when a high priority process enters into a ready state.</p>
+<h7>First Come First Serve (FCFS)</h7>
+<ul>
+<li>Jobs are executed on first come, first serve basis.</li>
+<li>It is a non-preemptive, pre-emptive scheduling algorithm.</li>
+<li>Easy to understand and implement.</li>
+<li>Its implementation is based on FIFO queue.</li>
+<li>Poor in performance as average wait time is high.</li>
+<%= image_tag("fcfs.jpg", :alt => "FCFS") %>
+</ul>
+<p><b>Wait time</b> of each process is as follows &minus;</p>
+
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:30%; text-align:center;">Process</th>
+<th style="width:30%; text-align:center;">Wait Time : Service Time - Arrival Time</th>
+</tr>
+<tr>
+<td>P0</td>
+<td>0 - 0 = 0</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>5 - 1 = 4</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>8 - 2 = 6</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>16 - 3 = 13</td>
+</tr>
+</table>
+</div>
+<p>Average Wait Time: (0+4+6+13) / 4 = 5.75</p>
+<h7>Shortest Job Next (SJN)</h7>
+<ul class="list">
+<li><p>This is also known as <b>shortest job first</b>, or SJF</p></li>
+<li><p>This is a non-preemptive, pre-emptive scheduling algorithm.</p></li>
+<li><p>Best approach to minimize waiting time.</p></li>
+<li><p>Easy to implement in Batch systems where required CPU time is known in advance.</p></li>
+<li><p>Impossible to implement in interactive systems where required CPU time is not known.</p></li>
+<li><p>The processer should know in advance how much time process will take.</p></li>
+</ul>
+<div align="center"><%= image_tag("sjf.jpg", :alt => "SJF") %></div>
+<p><b>Wait time</b> of each process is as follows &minus;</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:10%; text-align:center">Process</th>
+<th style="width:10%; text-align:center">Wait Time : Service Time - Arrival Time</th>
+</tr>
+<tr>
+<td>P0</td>
+<td>3 - 0 = 3</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>0 - 0 = 0</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>16 - 2 = 14</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>8 - 3 = 5</td>
+</tr>
+</table>
+</div>
+<p>Average Wait Time: (3+0+14+5) / 4 = 5.50</p>
+<h7>Priority Based Scheduling</h7>
+<ul class="list">
+<li><p>Priority scheduling is a non-preemptive algorithm and one of the most common scheduling algorithms in batch systems.</p></li>
+<li><p>Each process is assigned a priority. Process with highest priority is to be executed first and so on.</p></li>
+<li><p>Processes with same priority are executed on first come first served basis.</p></li>
+<li><p>Priority can be decided based on memory requirements, time requirements or any other resource requirement.</p></li>
+<div align="center"><%= image_tag("priority_scheduling.jpg", :alt => "Priority Scheduling") %></div>
+<p><b>Wait time</b> of each process is as follows &minus;</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:10%; text-align:center">Process</th>
+<th style="width:10%; text-align:center">Wait Time : Service Time - Arrival Time</th>
+</tr>
+<tr>
+<td>P0</td>
+<td>9 - 0 = 9</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>6 - 1 = 5</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>14 - 2 = 12</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>0 - 0 = 0</td>
+</tr>
+</table>
+</div>
+<p>Average Wait Time: (9+5+12+0) / 4 = 6.5</p>
+<h7>Shortest Remaining Time</h7>
+<ul class="list">
+<li><p>Shortest remaining time (SRT) is the preemptive version of the SJN algorithm.</p></li>
+<li><p>The processor is allocated to the job closest to completion but it can be preempted by a newer ready job with shorter time to completion.</p></li>
+<li><p>Impossible to implement in interactive systems where required CPU time is not known.</p></li>
+<li><p>It is often used in batch environments where short jobs need to give preference.</p></li>
+</ul>
+<h7>Round Robin Scheduling</h7>
+<ul class="list">
+<li><p>Round Robin is the preemptive process scheduling algorithm.</p></li>
+<li><p>Each process is provided a fix time to execute, it is called a <b>quantum</b>.</p></li>
+<li><p>Once a process is executed for a given time period, it is preempted and other process executes for a given time period.</p></li>
+<li><p>Context switching is used to save states of preempted processes.</p></li>
+</ul>
+<div align="center"><%= image_tag("round_robin.jpg", :alt => "Round Robin Scheduling Algorithm" %></div>
+<p><b>Wait time</b> of each process is as follows &minus;</p>
+<div align="center"><table border="1" cellpadding="5" cellspacing="5" style="text-align:center;" class="table table-bordered">
+<tr>
+<th style="width:10%; text-align:center">Process</th>
+<th style="width:10%; text-align:center">Wait Time : Service Time - Arrival Time</th>
+</tr>
+<tr>
+<td>P0</td>
+<td>(0 - 0) + (12 - 3) = 9</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>(3 - 1) = 2</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>(6 - 2) + (14 - 9) + (20 - 17) = 12</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>(9 - 3) + (17 - 12) = 11</td>
+</tr>
+</table>
+</div>
+<p>Average Wait Time: (9+2+12+11) / 4 = 8.5</p>
+<h7>Multiple-Level Queues Scheduling</h7>
+<p>Multiple-level queues are not an independent scheduling algorithm. They make use of other existing algorithms to group and schedule jobs with common characteristics.</p>
+<ul class="list">
+<li>Multiple queues are maintained for processes with common characteristics.</li>
+<li>Each queue can have its own scheduling algorithms.</li>
+<li>Priorities are assigned to each queue.</li>
+</ul>
+<p>For example, CPU-bound jobs can be scheduled in one queue and all I/O-bound jobs in another queue. The Process Scheduler then alternately selects jobs from each queue and assigns them to the CPU based on the algorithm assigned to the queue.</p>
+</ul>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</div>
+</body>
+</html>

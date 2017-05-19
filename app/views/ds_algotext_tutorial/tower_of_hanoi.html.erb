@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Structures and Algorithms</title>
+<%= stylesheet_link_tag 'ds2.scss' %>
+ <center><h1>LearnOnline</h1></center>
+     <center><h7>-an online study point</h7></center>
+      <hr/>
+</head>
+<body>
+<div style="background-color:#FFFFE0;height:1090px;width:300px;float:left;">
+<ul>
+<class>Data Structures &amp; Algorithms</class>
+<li><%= link_to 'Home', dsalgo_index_path%></li>
+<li><%= link_to 'Overview', dsalgo_data_structure_overview_path%></li>
+<li><%= link_to 'Environment Setup', dsalgo_data_structure_environment_path%></li>
+</ul>
+<ul>
+<class>Algorithms Contents:</class>
+<li><%= link_to 'Algorithms Basics', dsalgo_algorithms_basics_path%></li>
+<li><%= link_to 'Asymptotic Analysis', dsalgo_asymptotic_analysis_path%></li>
+<li><%= link_to 'Greedy Algorithms', dsalgo_greedy_algorithms_path%></li>
+<li><%= link_to 'Divide and Conquer', dsalgo_divide_and_conquer_path%></li>
+<li><%= link_to 'Dynamic Programming', dsalgo_dynamic_programming_path%></li>
+</ul>
+<ul>
+<class>Data Structures Contents:</class>
+<li><%= link_to 'Data Structure Basics', dsalgo_data_structure_basics_path%></li>
+<li><%= link_to 'Array Data Structure', dsalgo_array_data_structure_path%></li>
+</ul>
+<ul>
+<class>Linked Lists Contents:</class>
+<li><%= link_to 'Linked List Basics', dsalgo_linked_list_basics_path%></li>
+<li><%= link_to 'Doubly Linked List', dsalgo_doubly_linked_list_algorithm_path%></li>
+<li><%= link_to 'Circular Linked List', dsalgo_circular_linked_list_algorithm_path%></li>
+</ul>
+<ul>
+<class>Stack and Queue Contents:</class>
+<li><%= link_to 'Stack', dsalgo_stack_algorithm_path%></li>
+<li><%= link_to 'Expression Parsing', dsalgo_expression_parsing_path%></li>
+<li><%= link_to 'Queue', dsalgo_queue_path%></li>
+</ul>
+<ul>
+<class>Searching Techniques:</class>
+<li><%= link_to 'Linear Search', dsalgo_linear_search_algorithm_path%></li>
+<li><%= link_to 'Binary Search', dsalgo_binary_search_algorithm_path%></li>
+<li><%= link_to'Interpolation Search', dsalgo_interpolation_search_algorithm_path%></li>
+<li><%= link_to 'Hash Table', dsalgo_hash_data_structure_path%></li>
+</ul>
+<ul>
+<class>Sorting Techniques:</class>
+<li><%= link_to 'Sorting Algorithms', dsalgo_sorting_algorithms_path%></li>
+<li><%= link_to 'Bubble Sort', dsalgo_bubble_sort_algorithm_path%></li>
+<li><%= link_to 'Insertion Sort', dsalgo_insertion_sort_algorithm_path%></li>
+<li><%= link_to 'Selection Sort', dsalgo_selection_sort_algorithm_path%></li>
+<li><%= link_to 'Merge Sort', dsalgo_merge_sort_algorithm_path%></li>
+<li><%= link_to 'Shell Sort', dsalgo_shell_sort_algorithm_path%></li>
+<li><%= link_to 'Quick Sort', dsalgo_quick_sort_algorithm_path%></li>
+</ul>
+<ul>
+<class>Graphs:</class>
+<li><%= link_to 'Graph Data Structure', dsalgo_graph_data_structure_path%></li>
+<li><%= link_to 'Depth First Traversal', dsalgo_depth_first_traversal_path%></li>
+<li><%= link_to 'Breadth First Traversal', dsalgo_breadth_first_traversal_path%></li>
+</ul>
+<ul>
+<class>Tree:</class>
+<li><%= link_to 'Tree Data Structure', dsalgo_tree_data_structure_path%></li>
+<li><%= link_to 'Tree Traversal', dsalgo_tree_traversal_path%></li>
+<li><%= link_to 'Binary Search Tree', dsalgo_binary_search_tree_path%></li>
+<li><%= link_to 'AVL Tree', dsalgo_avl_tree_algorithm_path%></li>
+<li><%= link_to 'Spanning Tree', dsalgo_spanning_tree_path%></li>
+<li><%= link_to 'Heap', dsalgo_heap_data_structure_path%></li>
+</ul>
+<ul>
+<class>Recursion</class>
+<li><%= link_to 'Recursion Basics', dsalgo_recursion_basics_path%></li>
+<li><%= link_to 'Tower of Hanoi', dsalgo_tower_of_hanoi_path%></li>
+<li><%= link_to 'Fibonacci Series', dsalgo_fibonacci_series_path%></li>
+</ul>
+</div>
+<div style="height:1090px;width:990px;float:right;">
+<td style="text-align: right; vertical-align: top">
+<div class="front-menu">
+<table cellpadding="10">
+<tr><td style="text-align: left">
+<h4>Data Structure and Algorithms</h4>
+<hr />
+<p>Tower of Hanoi, is a mathematical puzzle which consists of three towers (pegs) and more than one rings is as depicted &minus;</p>
+<div align="center"><%= image_tag("tower_of_hanoi.jpg", :alt => "Tower of Hanoi") %></div>
+<p>These rings are of different sizes and stacked upon in an ascending order, i.e. the smaller one sits over the larger one. There are other variations of the puzzle where the number of disks increase, but the tower count remains the same.</p>
+<h4>Rules</h4>
+<p>The mission is to move all the disks to some another tower without violating the sequence of arrangement. A few rules to be followed for Tower of Hanoi are &minus;</p>
+<ul>
+<li>Only one disk can be moved among the towers at any given time.</li>   
+<li>Only the "top" disk can be removed.</li>   
+<li>No large disk can sit over a small disk.</li>   
+</ul>
+<p>Following is an animated representation of solving a Tower of Hanoi puzzle with three disks.</p>
+<div align="center"><%= image_tag("tower_of_hanoi.gif", :alt => "Tower of Hanoi") %></div>
+<p>Tower of Hanoi puzzle with n disks can be solved in minimum <b>2<sup>n</sup>&minus;1</b> steps. This presentation shows that a puzzle with 3 disks has taken <b>2<sup>3</sup> - 1 = 7</b> steps.</p>
+<h4>Algorithm</h4>
+<p>To write an algorithm for Tower of Hanoi, first we need to learn how to solve this problem with lesser amount of disks, say &rarr; 1 or 2. We mark three towers with name, <b>source</b>, <b>destination</b> and <b>aux</b> (only to help moving the disks). If we have only one disk, then it can easily be moved from source to destination peg.</p>
+<p>If we have 2 disks &minus;</p>
+<ul>
+<li>First, we move the smaller (top) disk to aux peg.</li>   
+<li>Then, we move the larger (bottom) disk to destination peg.</li>
+<li>And finally, we move the smaller disk from aux to destination peg.</li>
+<div align="center"><%= image_tag("tower_of_hanoi_two_disks.jpg", :alt => "Tower of Hanoi") %></div>
+</ul>
+<p>So now, we are in a position to design an algorithm for Tower of Hanoi with more than two disks. We divide the stack of disks in two parts. The largest disk (n<sup>th</sup> disk) is in one part and all other (n-1) disks are in the second part.</p>
+<p>Our ultimate aim is to move disk <b>n</b> from source to destination and then put all other (n1) disks onto it. We can imagine to apply the same in a recursive way for all given set of disks.</p>
+<p>The steps to follow are &minus;</p>
+<pre>
+<b>Step 1</b> &minus; Move n-1 disks from <code><b>source</b></code> to <code><b>aux</b></code>
+<b>Step 2</b> &minus; Move n<sup>th</sup> disk from <code><b>source</b></code> to <code><b>dest</b></code>
+<b>Step 3</b> &minus; Move n-1 disks from <code><b>aux</b></code> to <code><b>dest</b></code>
+</pre>
+<p>A recursive algorithm for Tower of Hanoi can be driven as follows &minus;</p>
+<pre>
+START
+Procedure Hanoi(disk, source, dest, aux)
+
+   IF disk == 0, THEN
+      move disk from source to dest             
+   ELSE
+      Hanoi(disk - 1, source, aux, dest)     // Step 1
+      move disk from source to dest          // Step 2
+      Hanoi(disk - 1, aux, dest, source)     // Step 3
+   END IF
+   
+END Procedure
+STOP
+</pre>
+<hr />
+</tr>
+</table>
+</body>
+</html>
+</body>
+</html>
